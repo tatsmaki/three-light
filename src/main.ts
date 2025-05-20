@@ -4,13 +4,14 @@ import { hemiLight } from "./global/hemi_light";
 import { renderer } from "./global/renderer";
 import { scene } from "./global/scene";
 import { map, gridHelper } from "./objects/map";
-import { sky } from "./objects/sky";
+import { renderSky, sky } from "./objects/sky";
 import "./style.css";
 
 scene.add(camera, map, gridHelper, ambientLight, hemiLight, sky);
 
 renderer.setAnimationLoop(() => {
   renderCamera();
+  renderSky();
   renderer.render(scene, camera);
 });
 

@@ -10,7 +10,7 @@ export const map = new Group();
 
 map.rotateX(-Math.PI / 2);
 
-const planeGeo = new PlaneGeometry(100, 100);
+const planeGeo = new PlaneGeometry(1000, 1000);
 const planeMat = new MeshStandardMaterial({
   color: 0x00ff00,
 });
