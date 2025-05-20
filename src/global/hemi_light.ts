@@ -1,3 +1,3 @@
 import { HemisphereLight } from "three";
 
-export const hemiLight = new HemisphereLight(0x000000, 0x000000, 1);
+export const hemiLight = new HemisphereLight(0xff0000, 0x0000ff, 1);

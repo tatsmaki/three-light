@@ -16,6 +16,8 @@ const planeMat = new MeshStandardMaterial({
 });
 const plane = new Mesh(planeGeo, planeMat);
 
+plane.receiveShadow = true;
+
 map.add(plane);
 
 export const gridHelper = new GridHelper(100, 10);

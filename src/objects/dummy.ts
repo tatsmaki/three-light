@@ -1,13 +1,16 @@
-import { BoxGeometry, Group, Mesh, MeshStandardMaterial } from "three";
+import { Group, Mesh, MeshStandardMaterial, SphereGeometry } from "three";
 
 export const dummyGroup = new Group();
 
 const createDummy = () => {
-  const dummyGeo = new BoxGeometry(1, 1, 1);
-  const dummyMat = new MeshStandardMaterial({ color: 0x00ff00 });
+  const dummyGeo = new SphereGeometry(0.5);
+  const dummyMat = new MeshStandardMaterial({
+    color: 0x00ff00,
+  });
   const dummy = new Mesh(dummyGeo, dummyMat);
 
   dummy.castShadow = true;
+  dummy.receiveShadow = true;
 
   return dummy;
 };
